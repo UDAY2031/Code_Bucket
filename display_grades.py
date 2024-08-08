@@ -1,22 +1,20 @@
 def get_grade(mark):
-    if 91 <= mark <= 100:
+    if mark >= 91:
         return 'S Grade'
-    elif 81 <= mark <= 90:
+    elif mark >= 81:
         return 'A Grade'
-    elif 71 <= mark <= 80:
+    elif mark >= 71:
         return 'B Grade'
-    elif 61 <= mark <= 70:
+    elif mark >= 61:
         return 'C Grade'
-    elif 51 <= mark <= 60:
+    elif mark >= 51:
         return 'D Grade'
-    elif 41 <= mark <= 50:
+    elif mark >= 41:
         return 'E Grade'
     else:
         return 'F Grade'
 
-# Read marks for 4 subjects
-marks = [int(input(f"Enter marks for subject {i+1}: ")) for i in range(4)]
-
-# Display the grades
-for i, mark in enumerate(marks, start=1):
+# Read marks for 4 subjects and display the grades
+for i in range(1, 5):
+    mark = int(input(f"Enter marks for subject {i}: "))
     print(f"Subject {i}: {get_grade(mark)}")
